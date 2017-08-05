@@ -61,6 +61,6 @@ library(data.table)
 data_without_ativitytype<-mean_sd_data[,-c(1,2)]
 tidy_data<-aggregate(data_without_ativitytype,by=list(Activity_ID=mean_sd_data$`Activity Id`,Subject_ID=mean_sd_data$`Subject Id`),mean)
 
-write.table(tidy_data, './tidyData.txt',row.names=TRUE,sep='\t')
+write.table(tidy_data, './tidyData.txt',row.names=FALSE,sep='\t')
 
 
